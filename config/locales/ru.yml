@@ -1,0 +1,5 @@
+ru:
+  login:
+    title: Вход
+    input_placeholder: Введите ваш код
+    button_title: Войти!

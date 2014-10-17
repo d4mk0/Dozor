@@ -1,1 +1,5 @@
-this is login page
+h1 = t('login.title')
+= form_for :login do |f|
+  .form-group
+    = f.text_field :code, placeholder: t('login.input_placeholder'), class: 'form-control'
+  .form-group= f.submit t('login.button_title'), class: 'btn btn-danger'

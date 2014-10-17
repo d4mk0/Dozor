@@ -1,5 +1,5 @@
 doctype html
-html lang="en"
+html lang="ru"
   head
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
@@ -21,6 +21,10 @@ html lang="en"
 
 
   body
-    .container#main-container
-      = bootstrap_flash
-      = yield
+    #jumbo.jumbotron.text-center
+      .container#main-container
+        img src="https://s3.amazonaws.com/jetstrap-site/images/website/common/jetstrap_logo.png" 
+        hr
+        = bootstrap_flash
+        = yield
+        hr
