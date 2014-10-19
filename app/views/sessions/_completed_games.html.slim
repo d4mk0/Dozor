@@ -1,0 +1,6 @@
+- @quests = Quest.published.available_for_results
+- if @quests.present?
+  p.completed_games
+    h2 Прошедшие квесты
+    - @quests.each do |q|
+      = link_to q.name, results_quest_path(q)
