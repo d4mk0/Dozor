@@ -16,7 +16,7 @@ class Quest < ActiveRecord::Base
   end
 
   def results_available?
-    Time.now > end_at+1.hour
+    Time.now > end_at
   end
 
   def finished_teams
