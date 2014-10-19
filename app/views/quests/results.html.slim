@@ -1,0 +1,15 @@
+h1 Результаты игры
+table.table.table-hover#results_table
+  thead
+    tr
+      th Место
+      th Команда
+      th Время окончания
+      th Общее время прохождения
+  tbody
+    - @finished_teams.each do |t|
+      tr
+        td = @quest.place_for_team t
+        td = t.name
+        td = t.time_of_compete.strftime("%H:%M:%S %d.%m.%Y")
+        td = t.transit_time

@@ -1,0 +1,7 @@
+h1
+  |Квест начнется в  
+  = @quest.start_at.strftime("%H:%M %d.%m.%Y")
+.well
+  h2
+    string = @quest.name
+  p = @quest.description
