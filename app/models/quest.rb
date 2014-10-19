@@ -20,7 +20,7 @@ class Quest < ActiveRecord::Base
   end
 
   def finished_teams
-    teams.joins(:attempts).where(attempts: {result: 'success', task_id: tasks.published.last}).order('attempts.created_at')
+    teams.admitted.joins(:attempts).where(attempts: {result: 'success', task_id: tasks.published.last}).order('attempts.created_at')
   end
 
   def place_for_team(team)
