@@ -13,6 +13,8 @@ class ApplicationController < ActionController::Base
     end
 
     def check_team
-      redirect_to root_path unless @team.present?
+      unless params[:controller].match(/^rails_admin/)
+        redirect_to root_path unless @team.present?
+      end
     end
 end

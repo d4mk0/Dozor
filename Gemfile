@@ -19,6 +19,7 @@ gem 'turbolinks'
 gem 'jquery-validation-rails'
 gem 'rails-settings-cached', '0.4.1'
 gem 'paperclip', '~> 4.2'
+gem 'rails_admin'
 
 gem 'font-awesome-rails'
 gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git', branch: 'bootstrap3'
