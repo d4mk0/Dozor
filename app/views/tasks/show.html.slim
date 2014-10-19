@@ -1,0 +1,19 @@
+.progress.progress-striped.active
+  .progress-bar style=("width: #{@team.current_progress}%;") 
+h1
+  |Задание 
+  = "##{@task.number_in_quest_list}"
+.well
+  h2
+    string = @task.name
+  p = @task.description
+= form_for :attempt, url: attempt_quest_task_path(@task.quest, @task), html: { class: 'form-horizontal', role: :form, miltipart: true } do |f|
+  - if @task.code_task?
+    .form-group
+      = f.text_field :code, class: 'form-control', placeholder: "Введите найденный код"
+  - else
+    .form-group
+      label Загрузите фото
+      = f.file_field :photo, class: 'form-control'
+  button.btn.btn-danger type="submit" 
+      | Click!
