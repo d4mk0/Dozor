@@ -24,7 +24,7 @@ namespace :deploy do
   desc 'Stop application'
   task :stop do
     on roles(:app) do
-      # execute "[ -f #{current_path}/tmp/pids/unicorn.pid ] && kill -QUIT `cat #{current_path}/tmp/pids/unicorn.pid`"
+      execute "[ -f #{current_path}/tmp/pids/unicorn.pid ] && kill -QUIT `cat #{current_path}/tmp/pids/unicorn.pid`"
     end
   end
 
