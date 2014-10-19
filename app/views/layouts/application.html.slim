@@ -26,13 +26,17 @@ html lang="ru"
         = link_to root_path do
             = image_tag 'logo.png', size: '152x42'
         - if @team.present?
-          p.pull-right
-            = @team.name
-            |&nbsp;
-            = link_to 'Выход', login_path, method: :delete
+          .row
+            p.pull-right
+              = @team.name
+              |&nbsp;
+              = link_to 'Выход', login_path, method: :delete
         hr
         = bootstrap_flash
         = yield
         hr
-
+      .container-fluid
+        h3 Спонсор игры:
+        = link_to 'http://vk.com/kartingclubarena', target: '_blank' do
+          = image_tag 'http://cs620630.vk.me/v620630031/94e9/ZP5zp050m0c.jpg', size: '250x200'
     = render 'shared/yandex_metrika'
