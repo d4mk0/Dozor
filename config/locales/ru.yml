@@ -3,3 +3,8 @@ ru:
     title: Вход
     input_placeholder: Введите ваш код
     button_title: Войти!
+  code:
+    incorrect: Некорректный код
+    success: Правильный код
+  results:
+    access_denied: Результаты появятся чуть позже.
