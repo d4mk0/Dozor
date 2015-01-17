@@ -35,8 +35,12 @@ html lang="ru"
         = bootstrap_flash
         = yield
         hr
-      .container-fluid
-        h3 Спонсор игры:
-        = link_to 'http://vk.com/kartingclubarena', target: '_blank' do
-          = image_tag 'http://cs620630.vk.me/v620630031/94e9/ZP5zp050m0c.jpg', size: '250x200'
+        .col-md-12.text-center
+          .well style="background-color: #6EE3E7; color: #fff; font-size: 19px;"
+            = link_to 'http://d4mk0.me', target: '_blank', style: 'color: #fff; text-decoration: underline' do
+              |Разработал Дамир Коньков
+              br
+              |Developed by Damir Konkov
+              br
+              |d4mk0.me
     = render 'shared/yandex_metrika'
